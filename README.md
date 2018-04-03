@@ -1,4 +1,4 @@
-** fflib: oFFloading utility library **
+** fflib: o*ff*loading utility library **
 
 Dependencies:
  - Portals 4 reference library https://github.com/SalvatoreDiGirolamo/portals4 
