@@ -1,0 +1,98 @@
+                              Pushing language C
+                              Popping language C
+                              Pushing language CUDA
+                              Popping language CUDA
+                              Pushing language Cxx
+                              Popping language Cxx
+                              Pushing language FC
+                              Popping language FC
+
+================================================================================
+================================================================================
+Starting Configure Run at Tue Dec 29 14:33:09 2015
+Configure Options: --configModules=PETSc.Configure --optionsModule=config.compilerOptions --prefix=/home/digirols/fflib/benchmarks/petsc-3.6.3/build --with-mpi-dir=/home/digirols/openmpi-1.10.1/build/
+Working directory: /home/digirols/fflib/benchmarks/petsc-3.6.3
+Machine platform:
+('Linux', 'gauss', '3.2.0-4-amd64', '#1 SMP Debian 3.2.68-1+deb7u2', 'x86_64', '')
+Python version:
+2.7.9 (default, Mar  1 2015, 12:57:24) 
+[GCC 4.9.2]
+================================================================================
+          Pushing language C
+          Popping language C
+          Pushing language CUDA
+          Popping language CUDA
+          Pushing language Cxx
+          Popping language Cxx
+          Pushing language FC
+          Popping language FC
+================================================================================
+TEST configureExternalPackagesDir from config.framework(/home/digirols/fflib/benchmarks/petsc-3.6.3/config/BuildSystem/config/framework.py:832)
+TESTING: configureExternalPackagesDir from config.framework(config/BuildSystem/config/framework.py:832)
+================================================================================
+TEST configureDebuggers from config.utilities.debuggers(/home/digirols/fflib/benchmarks/petsc-3.6.3/config/BuildSystem/config/utilities/debuggers.py:22)
+TESTING: configureDebuggers from config.utilities.debuggers(config/BuildSystem/config/utilities/debuggers.py:22)
+  Find a default debugger and determine its arguments
+Checking for program /sbin/gdb...not found
+Checking for program /usr/sbin/gdb...not found
+Checking for program /usr/bin/gdb...found
+                Defined make macro "GDB" to "/usr/bin/gdb"
+Checking for program /sbin/dbx...not found
+Checking for program /usr/sbin/dbx...not found
+Checking for program /usr/bin/dbx...not found
+Checking for program /bin/dbx...not found
+Checking for program /home/digirols/dbx...not found
+Checking for program /sbin/xdb...not found
+Checking for program /usr/sbin/xdb...not found
+Checking for program /usr/bin/xdb...not found
+Checking for program /bin/xdb...not found
+Checking for program /home/digirols/xdb...not found
+Checking for program /sbin/dsymutil...not found
+Checking for program /usr/sbin/dsymutil...not found
+Checking for program /usr/bin/dsymutil...not found
+Checking for program /bin/dsymutil...not found
+Checking for program /home/digirols/dsymutil...not found
+              Defined make macro "DSYMUTIL" to "true"
+              Defined "USE_GDB_DEBUGGER" to "1"
+================================================================================
+TEST configureGit from config.sourceControl(/home/digirols/fflib/benchmarks/petsc-3.6.3/config/BuildSystem/config/sourceControl.py:24)
+TESTING: configureGit from config.sourceControl(config/BuildSystem/config/sourceControl.py:24)
+  Find the Git executable
+Checking for program /sbin/git...not found
+Checking for program /usr/sbin/git...not found
+Checking for program /usr/bin/git...found
+                Defined make macro "GIT" to "git"
+Executing: git --version
+stdout: git version 2.1.4
+================================================================================
+TEST configureCLanguage from PETSc.options.languages(/home/digirols/fflib/benchmarks/petsc-3.6.3/config/PETSc/options/languages.py:27)
+TESTING: configureCLanguage from PETSc.options.languages(config/PETSc/options/languages.py:27)
+  Choose whether to compile the PETSc library using a C or C++ compiler
+            C language is C
+              Defined "CLANGUAGE_C" to "1"
+================================================================================
+TEST configureDirectories from PETSc.options.petscdir(/home/digirols/fflib/benchmarks/petsc-3.6.3/config/PETSc/options/petscdir.py:23)
+TESTING: configureDirectories from PETSc.options.petscdir(config/PETSc/options/petscdir.py:23)
+  Checks PETSC_DIR and sets if not set
+*******************************************************************************
+         UNABLE to CONFIGURE with GIVEN OPTIONS    (see configure.log for details):
+-------------------------------------------------------------------------------
+The environmental variable PETSC_DIR /home/digirols/fflib/benchmarks/petsc-3.6.3/build MUST be the current directory /home/digirols/fflib/benchmarks/petsc-3.6.3
+*******************************************************************************
+  File "./config/configure.py", line 363, in petsc_configure
+    framework.configure(out = sys.stdout)
+  File "/home/digirols/fflib/benchmarks/petsc-3.6.3/config/BuildSystem/config/framework.py", line 1081, in configure
+    self.processChildren()
+  File "/home/digirols/fflib/benchmarks/petsc-3.6.3/config/BuildSystem/config/framework.py", line 1070, in processChildren
+    self.serialEvaluation(self.childGraph)
+  File "/home/digirols/fflib/benchmarks/petsc-3.6.3/config/BuildSystem/config/framework.py", line 1051, in serialEvaluation
+    child.configure()
+  File "/home/digirols/fflib/benchmarks/petsc-3.6.3/config/PETSc/options/petscdir.py", line 65, in configure
+    self.executeTest(self.configureDirectories)
+  File "/home/digirols/fflib/benchmarks/petsc-3.6.3/config/BuildSystem/config/base.py", line 126, in executeTest
+    ret = test(*args,**kargs)
+  File "/home/digirols/fflib/benchmarks/petsc-3.6.3/config/PETSc/options/petscdir.py", line 43, in configureDirectories
+    raise RuntimeError('The environmental variable PETSC_DIR '+self.dir+' MUST be the current directory '+os.getcwd())
+================================================================================
+Finishing Configure Run at Tue Dec 29 14:33:09 2015
+================================================================================

@@ -1,0 +1,19 @@
+<style>
+li{ margin:0px; padding: 0px;}
+</style>
+
+<h3>fflib: oFFloading utility library</h3>
+
+<strong>Compile requirements:</strong>
+<ul>
+<li>Portals 4 reference library <a href="https://code.google.com/p/portals4/">Google Code</a></li>
+<li>mpirun</li>
+<li>An IPv4 on ethX (required by portals lib)</li>
+</ul>
+
+<strong>Init/Finalize</strong>
+The library needs to be initialized/finalized through the calls:
+ff_init()
+ff_finalize
+
+

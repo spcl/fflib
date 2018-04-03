@@ -1,0 +1,60 @@
+# -------------------------------------
+# C Compiler 
+# -------------------------------------
+CC = icc 
+CC_OPTS = -O3
+LD_OPTS = -lm
+
+# -------------------------------------
+# MPI Compiler 
+# -------------------------------------
+MPICC = mpicc
+MPICC_OPTS = -O3
+MPILD_OPTS = -lm
+
+
+# -------------------------------------
+# UPC Compiler 
+# -------------------------------------
+UPCC = /ifs1/home/olivier/upcc2.6/bin/upcc
+UPCC_OPTS = --network=ibv
+UPCLD_OPTS = -lm
+
+
+# -------------------------------------
+# OPENMP Compiler 
+# -------------------------------------
+OMPCC = icc
+OMPCC_OPTS = -openmp 
+OMPLD_OPTS = -lm
+
+
+# -------------------------------------
+# SHMEM Compiler 
+# -------------------------------------
+SHMCC = 
+SHMCC_OPTS = 
+SHMLD_OPTS = 
+
+# -------------------------------------
+# GPSHMEM Compiler 
+# -------------------------------------
+GPSHMCC = 
+GPSHMCC_OPTS = 
+GPSHMLD_OPTS = 
+
+
+# -------------------------------------
+# Optional Build Flags:
+# -------------------------------------
+### Include Chunk tracking debug messages
+#FLAGS += -DCTRK
+#FLAGS += -DTRACE
+
+# -------------------------------------
+# Select random number generator
+# -------------------------------------
+
+RNG=Devine
+#RNG=ALFG
+#RNG=BRG

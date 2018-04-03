@@ -1,0 +1,900 @@
+      subroutine PetscSpaceSetFromOptions(a,z)
+       PetscSpace a ! PetscSpace
+       integer z
+       end subroutine
+      subroutine PetscSpaceDestroy(a,z)
+       PetscSpace a ! PetscSpace
+       integer z
+       end subroutine
+      subroutine PetscSpaceCreate(a,b,z)
+       integer a ! MPI_Comm
+       PetscSpace b ! PetscSpace
+       integer z
+       end subroutine
+      subroutine PetscSpaceGetOrder(a,b,z)
+       PetscSpace a ! PetscSpace
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscSpaceSetOrder(a,b,z)
+       PetscSpace a ! PetscSpace
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscSpacePolynomialSetTensor(a,b,z)
+       PetscSpace a ! PetscSpace
+       PetscBool b ! PetscBool
+       integer z
+       end subroutine
+      subroutine PetscSpacePolynomialGetTensor(a,b,z)
+       PetscSpace a ! PetscSpace
+       PetscBool b ! PetscBool
+       integer z
+       end subroutine
+      subroutine PetscDualSpaceView(a,b,z)
+       PetscDualSpace a ! PetscDualSpace
+       PetscViewer b ! PetscViewer
+       integer z
+       end subroutine
+      subroutine PetscDualSpaceSetFromOptions(a,z)
+       PetscDualSpace a ! PetscDualSpace
+       integer z
+       end subroutine
+      subroutine PetscDualSpaceSetUp(a,z)
+       PetscDualSpace a ! PetscDualSpace
+       integer z
+       end subroutine
+      subroutine PetscDualSpaceDestroy(a,z)
+       PetscDualSpace a ! PetscDualSpace
+       integer z
+       end subroutine
+      subroutine PetscDualSpaceCreate(a,b,z)
+       integer a ! MPI_Comm
+       PetscDualSpace b ! PetscDualSpace
+       integer z
+       end subroutine
+      subroutine PetscDualSpaceDuplicate(a,b,z)
+       PetscDualSpace a ! PetscDualSpace
+       PetscDualSpace b ! PetscDualSpace
+       integer z
+       end subroutine
+      subroutine PetscDualSpaceGetDM(a,b,z)
+       PetscDualSpace a ! PetscDualSpace
+       DM b ! DM
+       integer z
+       end subroutine
+      subroutine PetscDualSpaceSetDM(a,b,z)
+       PetscDualSpace a ! PetscDualSpace
+       DM b ! DM
+       integer z
+       end subroutine
+      subroutine PetscDualSpaceGetOrder(a,b,z)
+       PetscDualSpace a ! PetscDualSpace
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscDualSpaceSetOrder(a,b,z)
+       PetscDualSpace a ! PetscDualSpace
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscDualSpaceGetFunctional(a,b,c,z)
+       PetscDualSpace a ! PetscDualSpace
+       PetscInt b ! PetscInt
+       PetscQuadrature c ! PetscQuadrature
+       integer z
+       end subroutine
+      subroutine PetscDualSpaceGetDimension(a,b,z)
+       PetscDualSpace a ! PetscDualSpace
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscDualSpaceCreateReferenceCell(a,b,c,d,z)
+       PetscDualSpace a ! PetscDualSpace
+       PetscInt b ! PetscInt
+       PetscBool c ! PetscBool
+       DM d ! DM
+       integer z
+       end subroutine
+      subroutine PetscDualSpaceGetHeightSubspace(a,b,c,z)
+       PetscDualSpace a ! PetscDualSpace
+       PetscInt b ! PetscInt
+       PetscDualSpace c ! PetscDualSpace
+       integer z
+       end subroutine
+      subroutine PetscDualSpaceLagrangeGetContinuity(a,b,z)
+       PetscDualSpace a ! PetscDualSpace
+       PetscBool b ! PetscBool
+       integer z
+       end subroutine
+      subroutine PetscDualSpaceLagrangeSetContinuity(a,b,z)
+       PetscDualSpace a ! PetscDualSpace
+       PetscBool b ! PetscBool
+       integer z
+       end subroutine
+      subroutine PetscDualSpaceSimpleSetDimension(a,b,z)
+       PetscDualSpace a ! PetscDualSpace
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscDualSpaceSimpleSetFunctional(a,b,c,z)
+       PetscDualSpace a ! PetscDualSpace
+       PetscInt b ! PetscInt
+       PetscQuadrature c ! PetscQuadrature
+       integer z
+       end subroutine
+      subroutine PetscFESetFromOptions(a,z)
+       PetscFE a ! PetscFE
+       integer z
+       end subroutine
+      subroutine PetscFEDestroy(a,z)
+       PetscFE a ! PetscFE
+       integer z
+       end subroutine
+      subroutine PetscFECreate(a,b,z)
+       integer a ! MPI_Comm
+       PetscFE b ! PetscFE
+       integer z
+       end subroutine
+      subroutine PetscFEGetSpatialDimension(a,b,z)
+       PetscFE a ! PetscFE
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscFESetNumComponents(a,b,z)
+       PetscFE a ! PetscFE
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscFEGetNumComponents(a,b,z)
+       PetscFE a ! PetscFE
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscFESetTileSizes(a,b,c,d,e,z)
+       PetscFE a ! PetscFE
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d ! PetscInt
+       PetscInt e ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscFEGetTileSizes(a,b,c,d,e,z)
+       PetscFE a ! PetscFE
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d ! PetscInt
+       PetscInt e ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscFEGetBasisSpace(a,b,z)
+       PetscFE a ! PetscFE
+       PetscSpace b ! PetscSpace
+       integer z
+       end subroutine
+      subroutine PetscFESetBasisSpace(a,b,z)
+       PetscFE a ! PetscFE
+       PetscSpace b ! PetscSpace
+       integer z
+       end subroutine
+      subroutine PetscFEGetDualSpace(a,b,z)
+       PetscFE a ! PetscFE
+       PetscDualSpace b ! PetscDualSpace
+       integer z
+       end subroutine
+      subroutine PetscFESetDualSpace(a,b,z)
+       PetscFE a ! PetscFE
+       PetscDualSpace b ! PetscDualSpace
+       integer z
+       end subroutine
+      subroutine PetscFEGetQuadrature(a,b,z)
+       PetscFE a ! PetscFE
+       PetscQuadrature b ! PetscQuadrature
+       integer z
+       end subroutine
+      subroutine PetscFESetQuadrature(a,b,z)
+       PetscFE a ! PetscFE
+       PetscQuadrature b ! PetscQuadrature
+       integer z
+       end subroutine
+      subroutine PetscFEGetDimension(a,b,z)
+       PetscFE a ! PetscFE
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscFECreateDefault(a,b,c,d,e,f,g,z)
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscBool d ! PetscBool
+       character e (*) ! char
+       PetscInt f ! PetscInt
+       PetscFE g ! PetscFE
+       integer z
+       end subroutine
+      subroutine PetscDSSetFromOptions(a,z)
+       PetscDS a ! PetscDS
+       integer z
+       end subroutine
+      subroutine PetscDSDestroy(a,z)
+       PetscDS a ! PetscDS
+       integer z
+       end subroutine
+      subroutine PetscDSCreate(a,b,z)
+       integer a ! MPI_Comm
+       PetscDS b ! PetscDS
+       integer z
+       end subroutine
+      subroutine PetscDSGetNumFields(a,b,z)
+       PetscDS a ! PetscDS
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscDSGetSpatialDimension(a,b,z)
+       PetscDS a ! PetscDS
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscDSGetTotalDimension(a,b,z)
+       PetscDS a ! PetscDS
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscDSGetTotalBdDimension(a,b,z)
+       PetscDS a ! PetscDS
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscDSGetTotalComponents(a,b,z)
+       PetscDS a ! PetscDS
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscDSGetDiscretization(a,b,c,z)
+       PetscDS a ! PetscDS
+       PetscInt b ! PetscInt
+       PetscObject c ! PetscObject
+       integer z
+       end subroutine
+      subroutine PetscDSGetBdDiscretization(a,b,c,z)
+       PetscDS a ! PetscDS
+       PetscInt b ! PetscInt
+       PetscObject c ! PetscObject
+       integer z
+       end subroutine
+      subroutine PetscDSSetDiscretization(a,b,c,z)
+       PetscDS a ! PetscDS
+       PetscInt b ! PetscInt
+       PetscObject c ! PetscObject
+       integer z
+       end subroutine
+      subroutine PetscDSSetBdDiscretization(a,b,c,z)
+       PetscDS a ! PetscDS
+       PetscInt b ! PetscInt
+       PetscObject c ! PetscObject
+       integer z
+       end subroutine
+      subroutine PetscDSAddDiscretization(a,b,z)
+       PetscDS a ! PetscDS
+       PetscObject b ! PetscObject
+       integer z
+       end subroutine
+      subroutine PetscDSAddBdDiscretization(a,b,z)
+       PetscDS a ! PetscDS
+       PetscObject b ! PetscObject
+       integer z
+       end subroutine
+      subroutine PetscDSGetImplicit(a,b,c,z)
+       PetscDS a ! PetscDS
+       PetscInt b ! PetscInt
+       PetscBool c ! PetscBool
+       integer z
+       end subroutine
+      subroutine PetscDSSetImplicit(a,b,c,z)
+       PetscDS a ! PetscDS
+       PetscInt b ! PetscInt
+       PetscBool c ! PetscBool
+       integer z
+       end subroutine
+      subroutine PetscDSGetAdjacency(a,b,c,d,z)
+       PetscDS a ! PetscDS
+       PetscInt b ! PetscInt
+       PetscBool c ! PetscBool
+       PetscBool d ! PetscBool
+       integer z
+       end subroutine
+      subroutine PetscDSSetAdjacency(a,b,c,d,z)
+       PetscDS a ! PetscDS
+       PetscInt b ! PetscInt
+       PetscBool c ! PetscBool
+       PetscBool d ! PetscBool
+       integer z
+       end subroutine
+      subroutine PetscDSGetFieldOffset(a,b,c,z)
+       PetscDS a ! PetscDS
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscDSGetBdFieldOffset(a,b,c,z)
+       PetscDS a ! PetscDS
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscDSGetComponentOffset(a,b,c,z)
+       PetscDS a ! PetscDS
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscDSGetComponentOffsets(a,b,z)
+       PetscDS a ! PetscDS
+       PetscInt b (*) ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscDSGetComponentDerivativeOffsets(a,b,z)
+       PetscDS a ! PetscDS
+       PetscInt b (*) ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscDSGetComponentBdOffsets(a,b,z)
+       PetscDS a ! PetscDS
+       PetscInt b (*) ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscDSGetComponentBdDerivativeOffsets(a,b,z)
+       PetscDS a ! PetscDS
+       PetscInt b (*) ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscQuadratureCreate(a,b,z)
+       integer a ! MPI_Comm
+       PetscQuadrature b ! PetscQuadrature
+       integer z
+       end subroutine
+      subroutine PetscQuadratureDuplicate(a,b,z)
+       PetscQuadrature a ! PetscQuadrature
+       PetscQuadrature b ! PetscQuadrature
+       integer z
+       end subroutine
+      subroutine PetscQuadratureDestroy(a,z)
+       PetscQuadrature a ! PetscQuadrature
+       integer z
+       end subroutine
+      subroutine PetscQuadratureGetOrder(a,b,z)
+       PetscQuadrature a ! PetscQuadrature
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscQuadratureSetOrder(a,b,z)
+       PetscQuadrature a ! PetscQuadrature
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscDTLegendreEval(a,b,c,d,e,f,g,z)
+       PetscInt a ! PetscInt
+       PetscReal b ! PetscReal
+       PetscInt c ! PetscInt
+       PetscInt d ! PetscInt
+       PetscReal e ! PetscReal
+       PetscReal f ! PetscReal
+       PetscReal g ! PetscReal
+       integer z
+       end subroutine
+      subroutine PetscDTGaussQuadrature(a,b,c,d,e,z)
+       PetscInt a ! PetscInt
+       PetscReal b ! PetscReal
+       PetscReal c ! PetscReal
+       PetscReal d ! PetscReal
+       PetscReal e ! PetscReal
+       integer z
+       end subroutine
+      subroutine PetscDTGaussTensorQuadrature(a,b,c,d,e,z)
+       PetscInt a ! PetscInt
+       PetscInt b ! PetscInt
+       PetscReal c ! PetscReal
+       PetscReal d ! PetscReal
+       PetscQuadrature e ! PetscQuadrature
+       integer z
+       end subroutine
+      subroutine PetscDTReconstructPoly(a,b,c,d,e,f,z)
+       PetscInt a ! PetscInt
+       PetscInt b ! PetscInt
+       PetscReal c ! PetscReal
+       PetscInt d ! PetscInt
+       PetscReal e ! PetscReal
+       PetscReal f ! PetscReal
+       integer z
+       end subroutine
+      subroutine PetscLimiterSetFromOptions(a,z)
+       PetscLimiter a ! PetscLimiter
+       integer z
+       end subroutine
+      subroutine PetscLimiterDestroy(a,z)
+       PetscLimiter a ! PetscLimiter
+       integer z
+       end subroutine
+      subroutine PetscLimiterCreate(a,b,z)
+       integer a ! MPI_Comm
+       PetscLimiter b ! PetscLimiter
+       integer z
+       end subroutine
+      subroutine PetscFVSetFromOptions(a,z)
+       PetscFV a ! PetscFV
+       integer z
+       end subroutine
+      subroutine PetscFVSetUp(a,z)
+       PetscFV a ! PetscFV
+       integer z
+       end subroutine
+      subroutine PetscFVDestroy(a,z)
+       PetscFV a ! PetscFV
+       integer z
+       end subroutine
+      subroutine PetscFVCreate(a,b,z)
+       integer a ! MPI_Comm
+       PetscFV b ! PetscFV
+       integer z
+       end subroutine
+      subroutine PetscFVSetLimiter(a,b,z)
+       PetscFV a ! PetscFV
+       PetscLimiter b ! PetscLimiter
+       integer z
+       end subroutine
+      subroutine PetscFVGetLimiter(a,b,z)
+       PetscFV a ! PetscFV
+       PetscLimiter b ! PetscLimiter
+       integer z
+       end subroutine
+      subroutine PetscFVSetNumComponents(a,b,z)
+       PetscFV a ! PetscFV
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscFVGetNumComponents(a,b,z)
+       PetscFV a ! PetscFV
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscFVSetSpatialDimension(a,b,z)
+       PetscFV a ! PetscFV
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscFVGetSpatialDimension(a,b,z)
+       PetscFV a ! PetscFV
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine PetscFVSetComputeGradients(a,b,z)
+       PetscFV a ! PetscFV
+       PetscBool b ! PetscBool
+       integer z
+       end subroutine
+      subroutine PetscFVGetComputeGradients(a,b,z)
+       PetscFV a ! PetscFV
+       PetscBool b ! PetscBool
+       integer z
+       end subroutine
+      subroutine PetscFVSetQuadrature(a,b,z)
+       PetscFV a ! PetscFV
+       PetscQuadrature b ! PetscQuadrature
+       integer z
+       end subroutine
+      subroutine PetscFVGetQuadrature(a,b,z)
+       PetscFV a ! PetscFV
+       PetscQuadrature b ! PetscQuadrature
+       integer z
+       end subroutine
+      subroutine PetscFVGetDualSpace(a,b,z)
+       PetscFV a ! PetscFV
+       PetscDualSpace b ! PetscDualSpace
+       integer z
+       end subroutine
+      subroutine PetscFVSetDualSpace(a,b,z)
+       PetscFV a ! PetscFV
+       PetscDualSpace b ! PetscDualSpace
+       integer z
+       end subroutine
+      subroutine PetscFVRefine(a,b,z)
+       PetscFV a ! PetscFV
+       PetscFV b ! PetscFV
+       integer z
+       end subroutine
+      subroutine PetscFVLeastSquaresSetMaxFaces(a,b,z)
+       PetscFV a ! PetscFV
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine DMCreate(a,b,z)
+       integer a ! MPI_Comm
+       DM b ! DM
+       integer z
+       end subroutine
+      subroutine DMClone(a,b,z)
+       DM a ! DM
+       DM b ! DM
+       integer z
+       end subroutine
+      subroutine VecGetDM(a,b,z)
+       Vec a ! Vec
+       DM b ! DM
+       integer z
+       end subroutine
+      subroutine VecSetDM(a,b,z)
+       Vec a ! Vec
+       DM b ! DM
+       integer z
+       end subroutine
+      subroutine MatGetDM(a,b,z)
+       Mat a ! Mat
+       DM b ! DM
+       integer z
+       end subroutine
+      subroutine MatSetDM(a,b,z)
+       Mat a ! Mat
+       DM b ! DM
+       integer z
+       end subroutine
+      subroutine DMDestroy(a,z)
+       DM a ! DM
+       integer z
+       end subroutine
+      subroutine DMSetUp(a,z)
+       DM a ! DM
+       integer z
+       end subroutine
+      subroutine DMSetFromOptions(a,z)
+       DM a ! DM
+       integer z
+       end subroutine
+      subroutine DMCreateGlobalVector(a,b,z)
+       DM a ! DM
+       Vec b ! Vec
+       integer z
+       end subroutine
+      subroutine DMCreateLocalVector(a,b,z)
+       DM a ! DM
+       Vec b ! Vec
+       integer z
+       end subroutine
+      subroutine DMGetLocalToGlobalMapping(a,b,z)
+       DM a ! DM
+       ISLocalToGlobalMapping b ! ISLocalToGlobalMapping
+       integer z
+       end subroutine
+      subroutine DMGetBlockSize(a,b,z)
+       DM a ! DM
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine DMCreateInterpolation(a,b,c,d,z)
+       DM a ! DM
+       DM b ! DM
+       Mat c ! Mat
+       Vec d ! Vec
+       integer z
+       end subroutine
+      subroutine DMCreateInjection(a,b,c,z)
+       DM a ! DM
+       DM b ! DM
+       Mat c ! Mat
+       integer z
+       end subroutine
+      subroutine DMCreateColoring(a,b,c,z)
+       DM a ! DM
+       ISColoringType b ! ISColoringType
+       ISColoring c ! ISColoring
+       integer z
+       end subroutine
+      subroutine DMCreateMatrix(a,b,z)
+       DM a ! DM
+       Mat b ! Mat
+       integer z
+       end subroutine
+      subroutine DMSetMatrixPreallocateOnly(a,b,z)
+       DM a ! DM
+       PetscBool b ! PetscBool
+       integer z
+       end subroutine
+      subroutine DMRefine(a,b,c,z)
+       DM a ! DM
+       integer b ! MPI_Comm
+       DM c ! DM
+       integer z
+       end subroutine
+      subroutine DMInterpolate(a,b,c,z)
+       DM a ! DM
+       Mat b ! Mat
+       DM c ! DM
+       integer z
+       end subroutine
+      subroutine DMGetRefineLevel(a,b,z)
+       DM a ! DM
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine DMGlobalToLocalBegin(a,b,c,d,z)
+       DM a ! DM
+       Vec b ! Vec
+       InsertMode c ! InsertMode
+       Vec d ! Vec
+       integer z
+       end subroutine
+      subroutine DMGlobalToLocalEnd(a,b,c,d,z)
+       DM a ! DM
+       Vec b ! Vec
+       InsertMode c ! InsertMode
+       Vec d ! Vec
+       integer z
+       end subroutine
+      subroutine DMLocalToGlobalBegin(a,b,c,d,z)
+       DM a ! DM
+       Vec b ! Vec
+       InsertMode c ! InsertMode
+       Vec d ! Vec
+       integer z
+       end subroutine
+      subroutine DMLocalToGlobalEnd(a,b,c,d,z)
+       DM a ! DM
+       Vec b ! Vec
+       InsertMode c ! InsertMode
+       Vec d ! Vec
+       integer z
+       end subroutine
+      subroutine DMLocalToLocalBegin(a,b,c,d,z)
+       DM a ! DM
+       Vec b ! Vec
+       InsertMode c ! InsertMode
+       Vec d ! Vec
+       integer z
+       end subroutine
+      subroutine DMLocalToLocalEnd(a,b,c,d,z)
+       DM a ! DM
+       Vec b ! Vec
+       InsertMode c ! InsertMode
+       Vec d ! Vec
+       integer z
+       end subroutine
+      subroutine DMCoarsen(a,b,c,z)
+       DM a ! DM
+       integer b ! MPI_Comm
+       DM c ! DM
+       integer z
+       end subroutine
+      subroutine DMRestrict(a,b,c,d,e,z)
+       DM a ! DM
+       Mat b ! Mat
+       Vec c ! Vec
+       Mat d ! Mat
+       DM e ! DM
+       integer z
+       end subroutine
+      subroutine DMSubDomainRestrict(a,b,c,d,z)
+       DM a ! DM
+       VecScatter b ! VecScatter
+       VecScatter c ! VecScatter
+       DM d ! DM
+       integer z
+       end subroutine
+      subroutine DMGetCoarsenLevel(a,b,z)
+       DM a ! DM
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine DMCreateAggregates(a,b,c,z)
+       DM a ! DM
+       DM b ! DM
+       Mat c ! Mat
+       integer z
+       end subroutine
+      subroutine DMSetApplicationContext(a,b,z)
+       DM a ! DM
+       PetscVoid b ! void
+       integer z
+       end subroutine
+      subroutine DMGetApplicationContext(a,b,z)
+       DM a ! DM
+       PetscVoid b ! void
+       integer z
+       end subroutine
+      subroutine DMHasVariableBounds(a,b,z)
+       DM a ! DM
+       PetscBool b ! PetscBool
+       integer z
+       end subroutine
+      subroutine DMHasColoring(a,b,z)
+       DM a ! DM
+       PetscBool b ! PetscBool
+       integer z
+       end subroutine
+      subroutine DMGetDefaultSection(a,b,z)
+       DM a ! DM
+       PetscSection b ! PetscSection
+       integer z
+       end subroutine
+      subroutine DMSetDefaultSection(a,b,z)
+       DM a ! DM
+       PetscSection b ! PetscSection
+       integer z
+       end subroutine
+      subroutine DMGetDefaultConstraints(a,b,c,z)
+       DM a ! DM
+       PetscSection b ! PetscSection
+       Mat c ! Mat
+       integer z
+       end subroutine
+      subroutine DMSetDefaultConstraints(a,b,c,z)
+       DM a ! DM
+       PetscSection b ! PetscSection
+       Mat c ! Mat
+       integer z
+       end subroutine
+      subroutine DMGetDefaultGlobalSection(a,b,z)
+       DM a ! DM
+       PetscSection b ! PetscSection
+       integer z
+       end subroutine
+      subroutine DMSetDefaultGlobalSection(a,b,z)
+       DM a ! DM
+       PetscSection b ! PetscSection
+       integer z
+       end subroutine
+      subroutine DMGetDefaultSF(a,b,z)
+       DM a ! DM
+       PetscSF b ! PetscSF
+       integer z
+       end subroutine
+      subroutine DMSetDefaultSF(a,b,z)
+       DM a ! DM
+       PetscSF b ! PetscSF
+       integer z
+       end subroutine
+      subroutine DMGetPointSF(a,b,z)
+       DM a ! DM
+       PetscSF b ! PetscSF
+       integer z
+       end subroutine
+      subroutine DMSetPointSF(a,b,z)
+       DM a ! DM
+       PetscSF b ! PetscSF
+       integer z
+       end subroutine
+      subroutine DMGetDS(a,b,z)
+       DM a ! DM
+       PetscDS b ! PetscDS
+       integer z
+       end subroutine
+      subroutine DMSetDS(a,b,z)
+       DM a ! DM
+       PetscDS b ! PetscDS
+       integer z
+       end subroutine
+      subroutine DMGetField(a,b,c,z)
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscObject c ! PetscObject
+       integer z
+       end subroutine
+      subroutine DMSetField(a,b,c,z)
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscObject c ! PetscObject
+       integer z
+       end subroutine
+      subroutine DMGetDimension(a,b,z)
+       DM a ! DM
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine DMSetDimension(a,b,z)
+       DM a ! DM
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine DMGetDimPoints(a,b,c,d,z)
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d ! PetscInt
+       integer z
+       end subroutine
+      subroutine DMSetCoordinates(a,b,z)
+       DM a ! DM
+       Vec b ! Vec
+       integer z
+       end subroutine
+      subroutine DMSetCoordinatesLocal(a,b,z)
+       DM a ! DM
+       Vec b ! Vec
+       integer z
+       end subroutine
+      subroutine DMGetCoordinates(a,b,z)
+       DM a ! DM
+       Vec b ! Vec
+       integer z
+       end subroutine
+      subroutine DMGetCoordinatesLocal(a,b,z)
+       DM a ! DM
+       Vec b ! Vec
+       integer z
+       end subroutine
+      subroutine DMGetCoordinateDM(a,b,z)
+       DM a ! DM
+       DM b ! DM
+       integer z
+       end subroutine
+      subroutine DMSetCoordinateDM(a,b,z)
+       DM a ! DM
+       DM b ! DM
+       integer z
+       end subroutine
+      subroutine DMGetCoordinateDim(a,b,z)
+       DM a ! DM
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine DMSetCoordinateDim(a,b,z)
+       DM a ! DM
+       PetscInt b ! PetscInt
+       integer z
+       end subroutine
+      subroutine DMGetCoordinateSection(a,b,z)
+       DM a ! DM
+       PetscSection b ! PetscSection
+       integer z
+       end subroutine
+      subroutine DMSetCoordinateSection(a,b,c,z)
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscSection c ! PetscSection
+       integer z
+       end subroutine
+      subroutine DMLocatePoints(a,b,c,z)
+       DM a ! DM
+       Vec b ! Vec
+       IS c ! IS
+       integer z
+       end subroutine
+      subroutine DMGetOutputDM(a,b,z)
+       DM a ! DM
+       DM b ! DM
+       integer z
+       end subroutine
+      subroutine DMGetOutputSequenceNumber(a,b,c,z)
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscReal c ! PetscReal
+       integer z
+       end subroutine
+      subroutine DMSetOutputSequenceNumber(a,b,c,z)
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscReal c ! PetscReal
+       integer z
+       end subroutine
+      subroutine DMGetLocalVector(a,b,z)
+       DM a ! DM
+       Vec b ! Vec
+       integer z
+       end subroutine
+      subroutine DMRestoreLocalVector(a,b,z)
+       DM a ! DM
+       Vec b ! Vec
+       integer z
+       end subroutine
+      subroutine DMGetGlobalVector(a,b,z)
+       DM a ! DM
+       Vec b ! Vec
+       integer z
+       end subroutine
+      subroutine DMClearGlobalVectors(a,z)
+       DM a ! DM
+       integer z
+       end subroutine
+      subroutine DMRestoreGlobalVector(a,b,z)
+       DM a ! DM
+       Vec b ! Vec
+       integer z
+       end subroutine

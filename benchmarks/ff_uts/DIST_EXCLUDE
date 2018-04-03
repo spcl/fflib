@@ -1,0 +1,16 @@
+.cvsignore
+gtc_ldbal.c
+uts_hws.c
+uts_gpshmem.c
+uts_dot.c
+rng/devine_sha1.h
+rng/devine_sha1.c
+
+config/dell-cluster
+config/linux-dev
+
+config.in
+CVS
+distrib
+DIST_EXCLUDE
+DIST_HEADER

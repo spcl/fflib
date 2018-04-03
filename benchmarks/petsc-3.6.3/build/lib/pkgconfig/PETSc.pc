@@ -1,0 +1,14 @@
+prefix=/home/digirols/fflib/benchmarks/petsc-3.6.3/build
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=/home/digirols/fflib/benchmarks/petsc-3.6.3/build/lib
+ccompiler=/home/digirols/openmpi-1.10.1/build/bin/mpicc
+fcompiler=/home/digirols/openmpi-1.10.1/build/bin/mpif90
+blaslapacklibs=-llapack -lblas
+
+Name: PETSc
+Description: Library to solve ODEs and algebraic equations
+Version: 3.6.3
+Cflags: -I/home/digirols/fflib/benchmarks/petsc-3.6.3/build/include -I/home/digirols/fflib/benchmarks/petsc-3.6.3/build/include -I/home/digirols/openmpi-1.10.1/build/include
+Libs: -L/home/digirols/fflib/benchmarks/petsc-3.6.3/build/lib  -lpetsc
+Libs.private: -llapack -lblas -lm -Wl,-rpath,/home/digirols/openmpi-1.10.1/build/lib -L/home/digirols/openmpi-1.10.1/build/lib -Wl,-rpath,/usr/lib/gcc/x86_64-linux-gnu/4.9 -L/usr/lib/gcc/x86_64-linux-gnu/4.9 -Wl,-rpath,/usr/lib/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu -Wl,-rpath,/lib/x86_64-linux-gnu -L/lib/x86_64-linux-gnu -lmpi_usempif08 -lmpi_usempi_ignore_tkr -lmpi_mpifh -lgfortran -lm -lgfortran -lm -lquadmath -lm -lmpi_cxx -lstdc++ -Wl,-rpath,/home/digirols/openmpi-1.10.1/build/lib -L/home/digirols/openmpi-1.10.1/build/lib -Wl,-rpath,/usr/lib/gcc/x86_64-linux-gnu/4.9 -L/usr/lib/gcc/x86_64-linux-gnu/4.9 -Wl,-rpath,/usr/lib/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu -Wl,-rpath,/lib/x86_64-linux-gnu -L/lib/x86_64-linux-gnu -Wl,-rpath,/usr/lib/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu -ldl -Wl,-rpath,/home/digirols/openmpi-1.10.1/build/lib -lmpi -lgcc_s -lpthread -ldl 

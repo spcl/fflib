@@ -1,0 +1,3 @@
+PETSC_ARCH=arch-linux2-c-debug
+PETSC_DIR=/home/digirols/fflib/benchmarks/petsc-3.6.3
+include /home/digirols/fflib/benchmarks/petsc-3.6.3/arch-linux2-c-debug/lib/petsc/conf/petscvariables
