@@ -69,6 +69,8 @@
 #define PDEBUG(X)
 #endif
 
+#define MIN(a, b) (a<b) ? a : b
+#define MAX(a, b) (a>b) ? a : b
 
 typedef struct _ffcoll_op ff_op;
 typedef struct _ffcoll_schedule ff_schedule;
@@ -79,7 +81,7 @@ ptl_handle_ni_t ni_logical;
 ptl_handle_eq_t eventqueue;
 ptl_pt_index_t logical_pt_index;
 ptl_process_t myself;
-
+extern ptl_ni_limits_t ptl_limits;
 
 typedef unsigned int ff_handle;
 
@@ -101,7 +103,14 @@ struct _ffcoll_op{
     ff_peer peer;
     ff_tag tag;
 
-    void * buff;
+    union{
+        void * buff;
+        struct{
+            ff_handle iovec_in;
+            ff_handle iovec_out;
+        };
+    };
+
     ff_size_t length;
 
     //ff_op * nextdep;
@@ -235,6 +244,8 @@ int ff_post_send(ff_op * op, ptl_handle_ct_t depct, int threshold);
 int ff_repost_send(ff_op * op);
 
 int ff_post_computation(ff_op * comp, ptl_handle_ct_t depct, int threshold);
+void ff_op_free_computation(ff_op * comp);
+
 void ff_complete_receive(ptl_event_t event);
 
 int _ff_op_reset(ff_op * op);

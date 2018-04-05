@@ -240,7 +240,7 @@ AUTOMAKE = automake-1.13
 AWK = gawk
 CC = mpicc
 CCDEPMODE = depmode=gcc3
-CFLAGS = -g -I/users/salvodg/portals4/build//include/
+CFLAGS = -g -O2 -I/users/salvodg/portals4/build//include/
 CPP = gcc -E
 CPPFLAGS = 
 CYGPATH_W = echo
@@ -262,7 +262,7 @@ INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /usr/bin/ld -m elf_x86_64
-LDFLAGS = -L/users/salvodg/libs/ -L/users/salvodg/portals4/build//lib/
+LDFLAGS =  -L/users/salvodg/portals4/build//lib/
 LIBOBJS = 
 LIBS = -lportals 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool

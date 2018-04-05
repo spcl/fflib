@@ -336,6 +336,8 @@ int ff_op_hb(ff_op_h beforeh, ff_op_h afterh){
     FF_CHECK_NULL(before = (ff_op *) ff_storage_get(beforeh));
     return _ff_op_hb(before, after);
 }
+
+
 int _ff_op_hb(ff_op * before, ff_op * after){
 
     if (after->depcount >= FF_MAX_DEPENDECIES) return FF_FAIL;
@@ -350,16 +352,8 @@ int _ff_op_hb(ff_op * before, ff_op * after){
 
 
 int ff_op_free(ff_op_h oph){
-    //printf("########FREE\n");
     ff_op * op;
     FF_CHECK_NULL(op = (ff_op *) ff_storage_get(oph));
-
-/*testing for solo*/
-    /*if (op->options & FF_OP_DONT_WAIT == FF_OP_DONT_WAIT &&){
-
-    }*/
-/*end*/
-
 
     if (_ff_op_free(op)==FF_SUCCESS){
 #ifdef FF_MEM_REUSE
@@ -377,9 +371,17 @@ int _ff_op_free(ff_op * op){
     /* TODO: ensure that an op is freed only when all its deps are already frees.
        Otherwise, you will get an PTL_ARG_INVALID from the PTLMDRelease (if there is 
        an MD AND if the op is marked as FF_DONT_WAIT (see activation tree case). */
+
+    /* operation specific operations */
+    if (op->type==SEND) {;}
+    else if (op->type==RECEIVE) {;}
+    else if (op->type==COMPUTATION) { ff_op_free_computation(op); }
+    else if (op->type==NOP) {;}
+
     if (op->_depct!=PTL_CT_NONE) {
         FF_PCALL(PtlCTFree(op->_depct));
     }
+
     if (op->md!=0 && (op->type==SEND || op->type==RECEIVE || op->type==COMPUTATION)){
         PDEBUG(printf("[Rank %i] MD release; tag: %i\n", ff_get_rank(), op->tag);)
         FF_PCALL(PtlMDRelease(op->md));

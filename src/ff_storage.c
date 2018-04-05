@@ -214,7 +214,9 @@ ff_handle ff_storage_create(int size, void ** ptr){
     HASH_ADD_INT(allocated, id, he);
     return he->id;
 }
-/*
+
+
+/* moved to the header
 void * ff_storage_get(ff_handle handle){
     struct hentry * he;
     HASH_FIND_INT(allocated, &handle, he);
@@ -222,7 +224,6 @@ void * ff_storage_get(ff_handle handle){
     return he->addr;
 }
 */
-
 
 void ff_storage_delete(ff_handle handle){
     struct hentry * he = NULL;

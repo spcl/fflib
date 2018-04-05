@@ -63,6 +63,7 @@
 #define FF_SHADOW_TAG   4
 #define FF_BUF_DEP      8
 #define FF_REUSE        16
+#define FF_IOVEC        32
 
 /*== operators and types are defined as in portals4.h ==*/
 #define FF_MIN       0

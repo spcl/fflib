@@ -62,6 +62,8 @@ static ptl_handle_me_t overflow_buff_handle[FF_UQ_SIZE];
 //static ptl_handle_me_t overflow_buff_handle;
 ptl_handle_me_t unexpected_ctrl_msg_handle;
 
+
+ptl_ni_limits_t ptl_limits;
 /**TEST*/
 //ptl_handle_ct_t testct;
 /**END TEST*/
@@ -90,7 +92,7 @@ int ff_init(int * argc, char *** argv){
 #endif
 
     printf("[INIT] num_procs (from MPI): %i\n", num_procs);
-    FF_PCALL(PtlNIInit(PTL_IFACE_DEFAULT, PTL_NI_MATCHING | PTL_NI_LOGICAL, PTL_PID_ANY, NULL, NULL, &ni_logical));
+    FF_PCALL(PtlNIInit(PTL_IFACE_DEFAULT, PTL_NI_MATCHING | PTL_NI_LOGICAL, PTL_PID_ANY, NULL, &ptl_limits, &ni_logical));
 
     //Barrier inside libtest_get_mapping
     //int i;
